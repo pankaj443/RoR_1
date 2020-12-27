@@ -21,6 +21,7 @@ $navbar-default-bg: #08088A;
 
 .centre{
     text-align:center;
+    margin-top:0;
 }
 
 .jumbotron{
@@ -60,4 +61,26 @@ footer small{
 
 footer ul{
     float:right;
+}
+
+.article-actions{
+    border-top:1px solid #eaeaea;
+    padding:5px;
+}
+.description{
+    margin-top:0;
+    
+}
+
+.article-title{
+    font-weight: bold;
+    font-size:1.5em;
+}
+
+.article-body{
+    
+    border-top:1px solid #eaeaea;
+    padding-top:15px;
+    padding-bottom:15px;
+    
 }

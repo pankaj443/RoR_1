@@ -1,21 +1,13 @@
-<% if @article.errors.any? %>
-<h2>ERRORS</h2>
-<ul>
-    <% @article.errors.full_messages.each do |msg| %>
-<li><%=msg%></li>
-<% end%>
-    
-</ul>
-<% end %>
+<%= render 'shared/errors',obj:@article%>
 
 <div class='row'>
     
     <div class='col-xs-12'>
 
-<%= form_for(@article,:html => {class:"form-horizontal",role:"form"}) @article do |f| %>
+<%= form_for(@article,:html => {class:"form-horizontal",role:"form"})  do |f| %>
 
  <div class="form-group">
-      <div class="control-label col-sm-2">
+      <div class="control-label col-sm-2" >
 
 
     <%= f.label :title %>
@@ -42,7 +34,7 @@
     
     
      <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
+      <div class="col-sm-offset-5 col-sm-10">
           
           
            <%= f.submit class:'btn-primary btn-lg' %>
@@ -54,8 +46,8 @@
 
 <% end %>
 
-<div class="col-xs-4 col-xs-offset-4">
-   [ <%= link_to "Back", articles_path %> ]
+<div class="col-xs-4 col-xs-offset-5">
+   [ <%= link_to "Back To Home", articles_path %> ]
     
 </div>
 

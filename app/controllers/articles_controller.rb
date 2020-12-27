@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
         
         @article.destroy
         
-        flash[:notice] = "DELETED"
+        flash[:danger] = "DELETED"
         redirect_to articles_path
         
         
@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
         
         if @article.update(article_params)
             
-            flash[:notice] = "UPDATED"
+            flash[:success] = "UPDATED"
             redirect_to article_path(@article)
             
         else
@@ -58,7 +58,7 @@ class ArticlesController < ApplicationController
         
         if @article.save
             
-            flash[:notice] = "SAVED"
+            flash[:success] = "SAVED"
             redirect_to article_path(@article)
             
         else

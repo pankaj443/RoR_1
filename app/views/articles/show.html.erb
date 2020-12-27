@@ -29,7 +29,7 @@
     
     <%= link_to "View All", articles_path ,class:"btn btn-xs btn-success"%>
 
-<% if logged_in? && (current_user == @article.user || && current_user.admin?)%>
+<% if logged_in? && (current_user == @article.user ||  current_user.admin?)%>
 
  <%= link_to "Delete", article_path(@article), method: :delete,data: {confirm:"Are you sure?"},class:"btn btn-xs btn-danger"%>
 <%= link_to "Edit", edit_article_path(@article) ,class:"btn btn-xs btn-primary"%>

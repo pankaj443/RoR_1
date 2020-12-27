@@ -16,8 +16,13 @@
                 <div class="article-body">
                     
                     <%= truncate(article.description,length:100)%>
+                    <br>
                     
-                </div>
+                    <div class="created">
+                         <small>Creadted by: <%= article.user.username if article.user%></small>
+               
+                    </div>
+                    </div>
                 
                 
                 <div class="article-actions">
